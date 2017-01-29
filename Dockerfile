@@ -2,7 +2,7 @@ FROM easypi/alpine-arm:3.4
 MAINTAINER sparklyballs
 
 # set version for s6 overlay
-ARG OVERLAY_VERSION="v1.18.1.5"
+ARG OVERLAY_VERSION="v1.19.1.1"
 ARG OVERLAY_ARCH="armhf"
 
 # environment variables
