@@ -1,4 +1,5 @@
-FROM easypi/alpine-arm:3.4
+FROM scratch
+ADD rootfs.tar.gz /
 MAINTAINER sparklyballs
 
 # set version for s6 overlay
@@ -19,10 +20,8 @@ RUN \
 	bash \
 	ca-certificates \
 	coreutils \
+	shadow \
 	tzdata && \
- apk add --no-cache \
-	--repository http://nl.alpinelinux.org/alpine/edge/community \
-	shadow && \
 
 # add s6 overlay
  curl -o \
